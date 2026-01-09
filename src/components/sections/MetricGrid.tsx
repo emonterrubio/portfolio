@@ -7,15 +7,16 @@ interface MetricGridProps {
 }
 
 export const MetricGrid = ({ metrics, columns = 5 }: MetricGridProps) => {
+  // Responsive grid: 1 column on mobile, 3 columns on medium screens, scales to specified columns on large screens
   const gridCols = {
     2: "grid-cols-2",
-    3: "grid-cols-3",
-    4: "grid-cols-4",
-    5: "grid-cols-5",
+    3: "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4",
+    4: "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5",
+    5: "grid-cols-2 md:grid-cols-3 lg:grid-cols-5",
   };
 
   return (
-    <div className={`grid ${gridCols[columns]} gap-4 mt-2`}>
+    <div className={`grid ${gridCols[columns]} gap-2 md:gap-4 mt-2`}>
       {metrics.map((metric, index) => (
         <MetricCard key={index} value={metric.value} label={metric.label} />
       ))}

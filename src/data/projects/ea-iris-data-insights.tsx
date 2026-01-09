@@ -10,7 +10,6 @@ import {
   Callout, 
   List, 
   Steps, 
-  Example, 
   Flowchart,
   MetricGrid,
   InfoBoxGrid,
@@ -39,10 +38,10 @@ export const eaIrisDataInsights: ProjectContent = {
 
   // RESPONSIBILITIES SECTION
   responsibilities: [
-    "End-to-end product design from research to implementation",
+    "**End-to-end product design** from research to implementation",
     "Assisted user research across 4 personas and 8+ teams",
-    "Established design principles and product strategy",
-    "Created high-fidelity designs and functional prototypes",
+    "Established **design principles** and **product strategy**",
+    "Created **high-fidelity designs** and **functional prototypes**",
     "Partnered with Product and Engineering on roadmap",
   ],
 
@@ -68,16 +67,17 @@ export const eaIrisDataInsights: ProjectContent = {
       { label: "WEEK 5+", action: "Wait for final report" },
     ]),
     TextBlock("**The cost?** Missed revenue opportunities, slow market response, and frustrated teams across Finance, Marketing, HR, and Sales."),
-    TextBlock("Iris v1 was the first attempt at solving this problem and was modeled after ChatGPT but **failed to accommodate diverse personas and workflows**."),
-    Example(
-      "After extensive usability testing, four main core pain points became obvious:",
-      [
+    Callout("Iris v1 was the first attempt at solving this problem and was modeled after ChatGPT but **failed to accommodate diverse personas and workflows**.", {
+      icon: <Pointer className="w-6 h-6" style={{ transform: 'rotate(90deg)' }} />,
+      withBackground: true
+    }),
+    TextBlock("After extensive usability testing, **four main core pain points** became obvious:"),
+    List([
         "Writing effective prompts required hand-holding",
-        "20+ second latency broke conversational flow",
-        "No manual configuration for different workflows",
-        "Ad hoc requesters vs. analysts had different needs",
-      ],
-    ),
+        "**20+ second latency** broke conversational flow",
+        "**No manual configuration for different workflows**",
+        "**Ad hoc requesters vs. analysts** had different needs",
+      ], true),
     Image("/images/ea-iris-home-v1.png", "Iris v1 home page", "The old Iris v1 home page", true),
     Callout("To address these challenges, we conducted extensive user research to **understand what teams actually needed from a data platform**.", {
       icon: <Pointer className="w-6 h-6" style={{ transform: 'rotate(90deg)' }} />,
@@ -88,19 +88,19 @@ export const eaIrisDataInsights: ProjectContent = {
   // DESIGN APPROACH SECTION
   designApproachSubheader: "Make Data Actionable",
   designApproach:
-    "As a user research foundation we conducted interviews & surveys with Pricing, Forecasting, and People Experience teams that revealed 3 non-negotiable requirements:",
+    "As a user research foundation we conducted interviews & surveys with Pricing, Forecasting, and People Experience teams that revealed **three non-negotiable requirements**:",
   designApproachContent: [
     Steps([
       {
-        title: "1. Trust and Accuracy",
+        title: "Trust and Accuracy",
         description: "Leaders need 100% accuracy for high-stakes decisions. We implemented data lineage, disambiguation workflows, and explainability features."
       },
       {
-        title: "2. Speed and Performance",
+        title: "Speed and Performance",
         description: "Real-time insights are the most valuable feature. We reduced response time (20s → 15s) and enabled async exploration through Stories."
       },
       {
-        title: "3. Collaboration and Access",
+        title: "Collaboration and Access",
         description: "Data must be accessible and shareable across teams. We built Stories as persistent, collaborative canvases."
       }
     ]),
@@ -118,7 +118,7 @@ export const eaIrisDataInsights: ProjectContent = {
       subheader: "Remove the blank box paralysis",
       text: "Before, Iris v1 struggled with **query ambiguity, leading to incorrect answers or failure to respond**. The system lacked a mechanism to validate its interpretation, undermining user trust and creating a frustrating rephrasing loop for complex questions.",
       content: [
-        Image("/images/ea-iris-box-paralysis.png", "Iris box paralysis", "The Iris box paralysis", true, "600px", "auto"),
+        Image("/images/ea-iris-box-paralysis.png", "Iris box paralysis", "The Iris box paralysis", true, "100%", "auto"),
         TextBlock("Now, the prompt validation builder **manages ambiguous queries and provides transparency into Iris's application of context and business rules**. This functionality delivers enhanced feedback, allowing users to refine questions and correct any answer inaccuracies."),
         Image("/images/ea-iris-disambiguation-builder.png", "Iris disambiguation builder", "The Iris disambiguation builder", true),
         ImageRow([
@@ -241,7 +241,7 @@ export const eaIrisDataInsights: ProjectContent = {
             ],
             variant: "blue"
           }
-        ], 3),
+        ], 2),
       ]
     },
     {

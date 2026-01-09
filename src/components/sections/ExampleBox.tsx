@@ -18,7 +18,7 @@ export const ExampleBox = ({
       <p className="text-base text-black">
         <InlineBoldText text={title} />
       </p>
-      <ul className="list-disc list-inside space-y-0 ml-4">
+      <ul className="space-y-3">
         {items.map((item, index) => (
           <li key={index} className="text-base text-black">
             <InlineBoldText text={item} />

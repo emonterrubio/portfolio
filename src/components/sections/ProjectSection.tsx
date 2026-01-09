@@ -15,10 +15,10 @@ export const ProjectSection = ({
 }: ProjectSectionProps) => {
   return (
     <section className={`space-y-2 ${className}`}>
-      <div className="space-y-1">
-        <h2 className="text-2xl font-semibold text-blue-600 font-heading">{title}</h2>
+      <div className="space-y-2">
+        <h2 className="md:text-2xl text-xl font-semibold text-blue-600 font-heading">{title}</h2>
         {subheader && (
-          <h3 className="text-4xl font-bold text-black pb-2 font-heading">{subheader}</h3>
+          <h3 className="md:text-4xl text-3xl font-semibold text-black pb-2 font-heading">{subheader}</h3>
         )}
       </div>
       <div className={`text-base text-black leading-normal space-y-6 ${contentClassName}`}>

@@ -3,14 +3,12 @@ import { Pointer, Lightbulb } from "lucide-react";
 import { 
   Image, 
   ImageRow, 
-  Text as TextBlock, 
-  Header, 
+  Text as TextBlock,
   HeaderWithText,
   HeaderWithList,
   Callout, 
   List, 
-  Steps, 
-  Example, 
+  Steps,
   MetricGrid,
   InfoBoxGrid,
 } from "../contentHelpers";
@@ -57,15 +55,13 @@ export const eaOmniShopping: ProjectContent = {
     "Many EA employees face delays in IT hardware purchasing due to a **reactive and fragmented ordering process**. Nearly half of North American workstation orders take too long to deliver, hindering productivity and increasing manual work for IT and support staff.\n\nBefore Omni Shopping, hardware procurement was a **fragmented, frustrating experience**:",
   problemContent: [
     Image("/images/ea-omni-shopping-hardware-journey.png", "EA hardware journey", "The hardware journey before Omni Shopping"),
-    Example(
-      "The data told a **clear story**:",
-      [
+    TextBlock("The data told a **clear story**:"),
+    List([
         "In North America, **47.7% of workstation orders were ad-hoc**, typically ranging from 1 to 5 units",
         "The average delivery time was **28 business days (38 calendar days)**, with 95-98% taking over two weeks",
         "Tools were scattered across Oracle, ServiceNow, and Asset Panda",
         "New hires often started without the necessary equipment",
-      ],
-    ),
+      ], true),
     TextBlock("**The cost?** Lost productivity, frustrated employees, and IT teams drowning in repetitive procurement tasks instead of strategic work."),
     Callout("To address these challenges, we conducted user research to **understand what employees expected from an IT hardware procurement shopping experience**.", {
       icon: <Pointer className="w-6 h-6" style={{ transform: 'rotate(90deg)' }} />,
@@ -75,19 +71,19 @@ export const eaOmniShopping: ProjectContent = {
 
   // DESIGN APPROACH SECTION
   designApproachSubheader: "Make Hardware Accessible",
-  designApproach: "Through interviews with Procurement, Site IT, and end-users across multiple studios, we identified three non-negotiable requirements:",
+  designApproach: "Through interviews with Procurement, Site IT, and end-users across multiple studios, we identified **three non-negotiable requirements**:",
   designApproachContent: [
     Steps([
       {
-        title: "1. Trust Through Curation",
+        title: "Trust Through Curation",
         description: "Employees need confidence in their choices. We built an IT-approved catalog with role-based recommendations and clear 'best fit' indicators."
       },
       {
-        title: "2. Speed and Self-Service",
+        title: "Speed and Self-Service",
         description: "In-stock inventory is the killer feature. We designed for 1-week delivery through centralized stock and automated workflows."
       },
       {
-        title: "3. Consumer-Grade Experience",
+        title: "Consumer-Grade Experience",
         description: "Hardware shopping should feel like Apple or Amazon, not enterprise software. No SQL, no tickets, no confusion."
       }
     ]),
@@ -132,7 +128,7 @@ export const eaOmniShopping: ProjectContent = {
         Image("/images/ea-omni-now-assist.png", "ServiceNow Now Assist", "ServiceNow Now Assist", true),
         HeaderWithList("Key Capabilities", [
           "**AI-powered guidance** that supports natural language queries",
-          "Translates intent into recommendations. **Recommendations are role-aware**.",
+          "Translates intent into **recommendations** which are also **role-aware**.",
           "Pulls role data from Workday, validates compatibility, and suggests bundles based on what similar roles have ordered",
           ], true, 3),
           HeaderWithText("Impact", "Projected **80%+ first-time success rate** for non-technical users, eliminating IT consultation dependency.", 3),
@@ -171,15 +167,13 @@ export const eaOmniShopping: ProjectContent = {
       content: [
         Image("/images/ea-omni-shopping-cursor.png", "EA Omni Shopping cursor", "The new Omni Shopping cursor"),
         Image("/images/ea-omni-shopping-vercel.png", "EA Omni Shopping vercel", "The new Omni Shopping vercel"),
-        Header("Key Capabilities"),
-        List([
-          "Functional React/Next.js/Tailwind prototype with live data (not static mockups)",
-          "AI-assisted code generation accelerated development 3-4x",
-          "Live demo site for stakeholder review and user testing",
-          "Seamless handoff to Engineering with production-ready component structure",
-        ], true),
-        Header("Impact"),
-        TextBlock("Prototype-to-production timeline **compressed from typical 6-8 weeks to 2 weeks**, with higher-fidelity output."),
+        HeaderWithList("Key Capabilities", [
+          "Functional React/Next.js/Tailwind **prototype with live data** (not static mockups)",
+          "AI-assisted code generation **accelerated development 3-4x**",
+          "**Live demo site** for stakeholder review and user testing",
+          "Seamless handoff to Engineering with **production-ready component structure**",
+        ], true, 3),
+        HeaderWithText("Impact", "Prototype-to-production timeline **compressed from typical 6-8 weeks to 2 weeks**, with higher-fidelity output.", 3),
       ]
     },
     {
@@ -227,9 +221,7 @@ export const eaOmniShopping: ProjectContent = {
               "AI-powered recommendations"
             ],
             variant: "blue"
-          }
-        ], 2),
-        InfoBoxGrid([
+          },
           {
             title: "IT Resource Savings",
             items: [

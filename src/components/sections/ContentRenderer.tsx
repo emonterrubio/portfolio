@@ -125,8 +125,8 @@ export const ContentRenderer = ({ content, className = "" }: ContentRendererProp
           const HeaderTag = level === 1 ? 'h1' : level === 2 ? 'h2' : level === 3 ? 'h3' : level === 5 ? 'h5' : 'h4';
           const ListTag = block.ordered ? 'ol' : 'ul';
           const listClass = block.ordered 
-            ? 'list-decimal list-inside space-y-0' 
-            : 'list-disc list-inside space-y-2 ml-4';
+            ? 'list-decimal list-inside space-y-1' 
+            : 'list-disc list-inside space-y-1 ml-4';
           
           return (
             <div key={index} className="space-y-1">
@@ -160,7 +160,7 @@ export const ContentRenderer = ({ content, className = "" }: ContentRendererProp
         if (block.type === 'list') {
           const ListTag = block.ordered ? 'ol' : 'ul';
           const listClass = block.ordered 
-            ? 'list-decimal list-inside space-y-0' 
+            ? 'list-decimal list-inside space-y-1' 
             : 'list-disc list-inside space-y-2 ml-4';
           
           return (

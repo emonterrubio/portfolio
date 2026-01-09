@@ -39,9 +39,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <article className="space-y-12">
           {/* Project Header */}
           <div className="space-y-1">
-            <h1 className="text-5xl font-semibold text-black leading-tight font-heading">{project.title}</h1>
+            <h1 className="text-3xl md:text-5xl font-semibold text-black leading-tight font-heading">{project.title}</h1>
             {project.subtitle && (
-              <p className="text-2xl font-normal leading-normal text-gray-500 font-heading">{project.subtitle}</p>
+              <p className="text-xl md:text-2xl font-normal leading-normal text-gray-500 font-heading">{project.subtitle}</p>
             )}
           </div>
 
@@ -106,7 +106,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {/* Responsibilities */}
           {!project.comingSoon && project.responsibilities && project.responsibilities.length > 0 && (
             <ProjectSection title="Responsibilities">
-              <ul className="list-disc list-inside">
+              <ul className="list-decimal list-inside space-y-1">
                 {project.responsibilities.map((responsibility, index) => (
                   <li key={index} className="text-base/6 text-black">
                     <InlineBoldText text={responsibility} />
