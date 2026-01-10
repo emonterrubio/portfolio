@@ -3,6 +3,7 @@ export interface AboutData {
     title: string;
     subtitle?: string;
     description: string;
+    avatar?: string;
   };
   selectedImpact: {
     title: string;
@@ -35,6 +36,7 @@ export const aboutData: AboutData = {
   hero: {
     title: "About Me",
     subtitle: "Product Design Leader",
+    avatar: "/images/ed-avatar.png",
     description: "I am a Product Design Leader who believes in Design as a **Strategic Multiplier**. My two-decade career is defined by **building high-performing teams and delivering transformative, enterprise-scale AI/ML solutions**. My experience includes driving innovation for global leaders like Google, Adobe, and Disney Imagineering.\n\nCurrently at Electronic Arts, I lead the design strategy for Generative AI applications that democratize data access for over 1,000+ internal users across finance, marketing, and operations. I specialize in **bridging the gap between executive business strategy and technical execution**, establishing design systems and frameworks that are adopted as standard across multiple global business units."
   },
   selectedImpact: {
@@ -43,13 +45,13 @@ export const aboutData: AboutData = {
       [
         "**$13.2M+ Revenue Uplift** and **$6-7.7M Cost Savings** across AI solutions",
         "**75% Faster** hardware delivery from the average 28 days to 7 days",
-        "**50% Reduction in IT Tickets**: Freed resources for strategic initiatives",
-        "**Data Prep Time**: Reduced from 2 hours to 15 minutes (92% time savings)",
-        "**Faster Prototyping** accelerated design cycles 4x faster to 2-week sprints"
+        "**50% Reduction in IT Tickets** that freed resources for strategic initiatives",
+        "Data Prep Time reduced from **2 hours to 15 minutes** (92% time savings)",
+        "Faster Prototyping accelerated design cycles **4x faster** to **2-week sprints**"
       ]
     ],
     numColumns: 1,
-    bgColor: "bg-slate-800",
+    bgColor: "bg-stone-700",
     textColor: "text-white",
   },
   skills: {
@@ -73,7 +75,7 @@ export const aboutData: AboutData = {
       ]
     ],
     numColumns: 2,
-    bgColor: "bg-slate-300",
+    bgColor: "bg-stone-300",
     textColor: "text-black"
   },
   paragraph: {

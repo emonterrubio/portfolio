@@ -15,7 +15,7 @@ export const CertificationsSection = ({ certifications, columns = 2 }: Certifica
       
       <div className={`grid grid-cols-1 ${gridCols} gap-4`}>
         {certifications.map((cert, index) => (
-          <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+          <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col h-full">
             {/* Organization Logo */}
             <div className="flex items-center gap-4 mb-4">
               {cert.logo ? (
@@ -41,8 +41,8 @@ export const CertificationsSection = ({ certifications, columns = 2 }: Certifica
               </div>
             </div>
             
-            {/* Certification Details */}
-            <div>
+            {/* Certification Details - Name at top, Date at bottom */}
+            <div className="flex flex-col flex-grow">
               <h3 className="text-lg font-semibold text-black mb-2">
                 {cert.url ? (
                   <a href={cert.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
@@ -52,10 +52,12 @@ export const CertificationsSection = ({ certifications, columns = 2 }: Certifica
                   cert.name
                 )}
               </h3>
-              <p className="text-sm text-gray-500 mb-2">{cert.issued}</p>
-              {cert.credentialId && (
-                <p className="text-xs text-gray-400">Credential ID: {cert.credentialId}</p>
-              )}
+              <div className="mt-auto pt-4">
+                <p className="text-sm text-gray-500">{cert.issued}</p>
+                {cert.credentialId && (
+                  <p className="text-xs text-gray-400 mt-1">Credential ID: {cert.credentialId}</p>
+                )}
+              </div>
             </div>
           </div>
         ))}

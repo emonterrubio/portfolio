@@ -16,6 +16,7 @@ function AboutMeSection() {
     <HeroSection 
       title={aboutData.hero.title}
       description={aboutData.hero.description}
+      avatar={aboutData.hero.avatar}
     />
   );
 }

@@ -40,7 +40,7 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
                 <h3 className="text-xl font-semibold text-black">{exp.company}</h3>
                 <p className="text-base text-black">{exp.companyPeriod}</p>
                 {exp.location && (
-                  <p className="text-base text-gray-600">{exp.location}</p>
+                  <p className="text-base text-gray-800">{exp.location}</p>
                 )}
               </div>
               
@@ -50,10 +50,10 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
                   <div key={posIndex}>
                     <div className="mb-2">
                       <h4 className="text-lg font-semibold text-black">{position.title}</h4>
-                      <p className="text-sm text-gray-500">{position.period}</p>
+                      <p className="text-base text-gray-800">{position.period}</p>
                     </div>
                     
-                    <div className="space-y-2 text-base text-gray-700">
+                    <div className="space-y-2 text-base text-black">
                       {position.description.map((item, descIndex) => (
                         <p key={descIndex}>
                           <InlineBoldText text={item} />

@@ -66,29 +66,29 @@ export const experienceData: ExperienceData = {
   experience: [
     {
       company: "Electronic Arts (EA)",
-      companyPeriod: "Full-time · 5 yrs 5 mos",
+      companyPeriod: "Full-time · Aug 2021 - Present",
       location: "Redwood City, California, United States · Hybrid",
       logo: "/images/logos/ea-logo.svg",
       positions: [
         {
           title: "Product Design Lead AI, Data, and New Technology",
-          period: "Jul 2021 - Present · 4 yrs 6 mos",
+          period: "Jul 2021 - Present",
           description: [
-            "Responsible for designing Generative AI internal applications, tools, and services for Data & Insights, supporting data-driven decision-making across finance, marketing, people, and operations business verticals. I help identify key areas for improvement and vulnerabilities and subsequently develop tools to address these issues on a large scale. Close collaboration with the EADP Data Science team, product managers, and analysts to continually evaluate results and minimize the effort required for application integration and support."
-          ]
-        },
-        {
-          title: "Product Design Lead, Game Creation",
-          period: "Nov 2021 - Jan 2023 · 1 yr 3 mos",
-          description: [
-            "Drive alignment with cross-discipline partners and stakeholders to help shape definitions and strategies, and integrate qualitative and quantitative research insights into a product strategy for IT Game Creation and Player Experience tools. Lead the design, direction, and implementation of code in React of EAIT's design system that feeds user-centered, easy-to-use, highly productive tools & services for central services teams that enable Game Development and customer support throughout EA. Work with product managers, designers, and engineers to plan requirements, identify risks, manage delivery timelines, and provide a smooth product delivery process that delivers on user experience, product consistency, and design excellence."
+            "Lead the design strategy for Generative AI internal applications and services, driving a data-driven culture across our Finance, Marketing, People, and Operations verticals. By partnering with C-level stakeholders to identify high-impact opportunities for automation, I architected large-scale solutions that **improved data-driven decision-making by 30%** and **reduced median response times from 20 to 15 seconds**. I collaborate deeply with the EADP Data Science team and product leadership to continuously optimize AI performance, ensuring that our extensible frameworks minimize integration effort while achieving **90% answer consistency** across all data domains."
           ]
         },
         {
           title: "Product Design Lead, Customer Experience",
+          period: "Nov 2021 - Jan 2023 · 1 yr 3 mos",
+          description: [
+            "Led the design strategy for Electronic Arts’ next-generation self-service help platform, creating a frictionless, AI-driven ecosystem that connects millions of players to contextual solutions. By leading cross-functional teams through complex requirement planning and risk mitigation, I delivered an intelligent support experience that achieved a **50%+ self-service resolution rate**, significantly exceeding industry averages. My leadership ensured design excellence and platform consistency while driving a **20% reduction in average handle time** and achieving a **customer effort score of <2.5**, fundamentally transforming how players resolve inquiries without disrupting their gameplay."
+          ]
+        },
+        {
+          title: "Product Design Lead, Game Creation",
           period: "Aug 2020 - Nov 2021 · 1 yr 4 mos",
           description: [
-            "Design lead on the Game Creation internal tools platform and Creator Network front-end development."
+            "Led the design strategy for a suite of managed products providing the foundational infrastructure for EA Studios and Central Services. The goal was to deliver powerful, high-productivity tools for Developers, Artists, and Testers. I spearheaded the architecture and React-based implementation of the EAIT Design System, a scalable framework that standardized UI/UX across global game development hubs to ensure long-term product consistency. By integrating qualitative research with quantitative performance data, I delivered services that achieved a **Search Success Rate of 65%+** and a **25-30% Contact Deflection Rate**, significantly exceeding industry benchmarks while enabling Central Services to support the entire EA portfolio with greater technical agility."
           ]
         }
       ]

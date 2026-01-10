@@ -15,7 +15,7 @@ export const EducationSection = ({ education, columns = 2 }: EducationSectionPro
       
       <div className={`grid grid-cols-1 ${gridCols} gap-4`}>
         {education.map((edu, index) => (
-          <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+          <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col h-full">
             {/* Institution Logo */}
             <div className="flex items-center gap-4 mb-4">
               {edu.logo ? (
@@ -41,10 +41,12 @@ export const EducationSection = ({ education, columns = 2 }: EducationSectionPro
               </div>
             </div>
             
-            {/* Education Details */}
-            <div>
+            {/* Education Details - Degree at top, Period at bottom */}
+            <div className="flex flex-col flex-grow">
               <h3 className="text-lg font-semibold text-black mb-2">{edu.degree}</h3>
-              <p className="text-sm text-gray-500">{edu.period}</p>
+              <div className="mt-auto pt-4">
+                <p className="text-sm text-gray-500">{edu.period}</p>
+              </div>
             </div>
           </div>
         ))}
