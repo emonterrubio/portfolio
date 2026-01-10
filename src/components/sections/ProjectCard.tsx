@@ -35,13 +35,13 @@ export const ProjectCard = ({
         </div>
         <div className="p-6 flex flex-col flex-grow">
           <div className="mb-2">
-            <span className="text-base font-bold text-blue-600">{role}</span>
+            <span className="text-base font-semibold text-blue-600">{role}</span>
           </div>
-          <h3 className="text-3xl font-bold text-black mb-1 font-heading">{title}</h3>
+          <h3 className="text-3xl font-semibold text-black mb-1 font-heading">{title}</h3>
           <p className="text-base text-gray-700 mb-4 flex-grow">{achievement}</p>
           <div className="flex items-center justify-between text-sm text-gray-600">
-            <span className="text-base font-bold text-gray-600">{year}</span>
-            <span className="text-base font-bold text-blue-600">{company}</span>
+            <span className="text-base font-regular text-gray-600">{year}</span>
+            <span className="text-base font-semibold text-blue-600">{company}</span>
           </div>
         </div>
       </article>

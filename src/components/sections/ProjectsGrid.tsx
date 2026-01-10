@@ -16,7 +16,7 @@ const projects = [
     title: "EA Iris Data Insights",
     role: "Design Lead",
     achievement: "Improved data-driven insights for critical functions by 30%",
-    year: "2024",
+    year: "2023",
     company: "Electronic Arts",
     imageSrc: "/images/ea-iris-hero.png",
     imageAlt: "EA Iris Data Insights project",
