@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="w-full max-w-6xl mx-auto px-6 sm:px-12 md:px-16 py-8">
+      <main className="w-full max-w-6xl mx-auto px-6 sm:px-12 md:px-16 pt-8">
         <Hero />
         <ProjectsGrid />
       </main>

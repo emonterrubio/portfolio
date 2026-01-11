@@ -13,7 +13,7 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
       
       <div className="space-y-8">
         {experiences.map((exp, expIndex) => (
-          <div key={expIndex} className="flex gap-4">
+          <div key={expIndex} className="flex flex-col md:flex-row gap-4">
             {/* Company Logo */}
             <div className="flex-shrink-0">
               {exp.logo ? (
@@ -45,7 +45,7 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
               </div>
               
               {/* Positions within the company */}
-              <div className="space-y-6 border-l-2 border-gray-200 pl-4">
+              <div className="space-y-6 md:border-l-2 md:border-gray-200 md:pl-4">
                 {exp.positions.map((position, posIndex) => (
                   <div key={posIndex}>
                     <div className="mb-2">

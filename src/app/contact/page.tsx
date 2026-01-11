@@ -74,8 +74,8 @@ export default function ContactPage() {
     <div className="min-h-screen">
       <Header />
       <main className="w-full max-w-4xl mx-auto py-12 px-6">
-        <div className="mb-12">
-          <h1 className="text-4xl font-semibold text-black mb-6 font-heading">
+        <div className="mb-6">
+          <h1 className="text-4xl font-semibold text-black font-heading">
             Let&apos;s work together. Reach Out.
           </h1>
         </div>

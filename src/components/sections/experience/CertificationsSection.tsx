@@ -13,7 +13,7 @@ export const CertificationsSection = ({ certifications, columns = 2 }: Certifica
     <section className="mb-12">
       <h2 className="text-3xl font-semibold text-black mb-6 pb-2 font-heading">Licenses & Certifications</h2>
       
-      <div className={`grid grid-cols-1 ${gridCols} gap-4`}>
+      <div className={`grid grid-cols-1 ${gridCols} gap-2 md:gap-4`}>
         {certifications.map((cert, index) => (
           <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow flex flex-col h-full">
             {/* Organization Logo */}

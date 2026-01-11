@@ -13,7 +13,7 @@ export const VolunteeringSection = ({ volunteering, columns = 2 }: VolunteeringS
     <section className="mb-12">
       <h2 className="text-3xl font-semibold text-black mb-6 pb-2 font-heading">Volunteering</h2>
       
-      <div className={`grid grid-cols-1 ${gridCols} gap-4`}>
+      <div className={`grid grid-cols-1 ${gridCols} gap-2 md:gap-4`}>
         {volunteering.map((vol, index) => (
           <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
             {/* Organization Logo */}
