@@ -3,11 +3,11 @@ import { Footer } from "@/components/shared/Footer";
 import { BackToTop } from "@/components/shared/BackToTop";
 import { ProjectSection } from "@/components/sections/ProjectSection";
 import { ProjectMetadata } from "@/components/sections/ProjectMetadata";
+import { AnimatedProjectHeader } from "@/components/sections/AnimatedProjectHeader";
 import { BoldText } from "@/components/sections/BoldText";
 import { InlineBoldText } from "@/components/sections/InlineBoldText";
 import { ContentRenderer } from "@/components/sections/ContentRenderer";
 import { projects } from "@/data/projects";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -37,25 +37,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Link>
 
         <article className="space-y-12">
-          {/* Project Header */}
-          <div className="space-y-1">
-            <h1 className="text-3xl md:text-5xl font-semibold text-black leading-tight font-heading">{project.title}</h1>
-            {project.subtitle && (
-              <p className="text-xl md:text-2xl font-normal leading-normal text-gray-500 font-heading">{project.subtitle}</p>
-            )}
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative w-full aspect-[16/8] bg-gray-100 rounded-lg overflow-hidden">
-            <Image
-              src={project.imageSrc}
-              alt={project.imageAlt}
-              fill
-              className="object-cover"
-              priority
-              sizes="100vw"
-            />
-          </div>
+          <AnimatedProjectHeader
+            title={project.title}
+            subtitle={project.subtitle}
+            imageSrc={project.imageSrc}
+            imageAlt={project.imageAlt}
+          />
 
           {/* Project Metadata */}
           {!project.comingSoon && (

@@ -16,9 +16,54 @@ interface ContentRendererProps {
 }
 
 export const ContentRenderer = ({ content, className = "" }: ContentRendererProps) => {
+  // Group consecutive callout blocks with withBackground into a container
+  const processedContent: (ContentBlock | { type: 'calloutGroup'; blocks: ContentBlock[] })[] = [];
+  let calloutGroup: ContentBlock[] = [];
+  
+  content.forEach((block, index) => {
+    if (block.type === 'callout' && block.withBackground) {
+      calloutGroup.push(block);
+    } else {
+      if (calloutGroup.length > 0) {
+        processedContent.push({ type: 'calloutGroup', blocks: calloutGroup });
+        calloutGroup = [];
+      }
+      processedContent.push(block);
+    }
+  });
+  
+  // Add any remaining callout group
+  if (calloutGroup.length > 0) {
+    processedContent.push({ type: 'calloutGroup', blocks: calloutGroup });
+  }
+
   return (
     <>
-      {content.map((block, index) => {
+      {processedContent.map((item, index) => {
+        // Handle callout group (Key Learning cards)
+        if (item.type === 'calloutGroup') {
+          return (
+            <div key={index} className="space-y-2">
+              {item.blocks.map((block, blockIndex) => {
+                if (block.type === 'callout') {
+                  return (
+                    <CalloutBox
+                      key={blockIndex}
+                      answer={block.text}
+                      icon={block.icon}
+                      question={block.question}
+                      withBackground={block.withBackground}
+                      className={className}
+                    />
+                  );
+                }
+                return null;
+              })}
+            </div>
+          );
+        }
+        
+        const block = item;
         // Image block
         if (block.type === 'image') {
           return (

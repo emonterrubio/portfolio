@@ -1,4 +1,7 @@
+"use client";
+
 import { ProjectCard } from "./ProjectCard";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -43,15 +46,45 @@ const projects = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 export const ProjectsGrid = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-12">
+    <motion.section 
+      className="w-full max-w-6xl mx-auto py-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={containerVariants}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} {...project} />
+        {projects.map((project, index) => (
+          <motion.div key={project.slug} variants={cardVariants}>
+            <ProjectCard {...project} />
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

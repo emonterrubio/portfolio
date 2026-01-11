@@ -7,6 +7,7 @@ import { ConfirmationModal } from "@/components/shared/ConfirmationModal";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { motion } from "framer-motion";
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -74,13 +75,24 @@ export default function ContactPage() {
     <div className="min-h-screen">
       <Header />
       <main className="w-full max-w-4xl mx-auto py-12 px-6">
-        <div className="mb-6">
+        <motion.div 
+          className="mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h1 className="text-4xl font-semibold text-black font-heading">
             Let&apos;s work together. Reach Out.
           </h1>
-        </div>
+        </motion.div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        <motion.form 
+          onSubmit={handleSubmit(onSubmit)} 
+          className="space-y-6"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        >
           {/* Name Fields - Side by Side */}
           <div>
             <label className="block text-black mb-2 text-sm font-medium">
@@ -170,7 +182,7 @@ export default function ContactPage() {
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </div>
-        </form>
+        </motion.form>
       </main>
       <Footer />
       

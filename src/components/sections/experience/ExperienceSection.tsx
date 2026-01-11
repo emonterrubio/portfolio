@@ -1,19 +1,56 @@
+"use client";
+
 import Image from "next/image";
 import { InlineBoldText } from "../InlineBoldText";
 import type { Experience } from "@/data/experience";
+import { motion } from "framer-motion";
 
 interface ExperienceSectionProps {
   experiences: Experience[];
 }
 
+const experienceVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
 export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
   return (
-    <section className="mb-12">
-      <h2 className="text-[40px] font-semibold text-black mb-6 pb-2 font-heading">Experience</h2>
+    <motion.section 
+      className="mb-12"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        visible: {
+          transition: {
+            staggerChildren: 0.1,
+          },
+        },
+      }}
+    >
+      <motion.h2 
+        className="text-[40px] font-semibold text-black mb-6 pb-2 font-heading"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        Experience
+      </motion.h2>
       
       <div className="space-y-8">
         {experiences.map((exp, expIndex) => (
-          <div key={expIndex} className="flex flex-col md:flex-row gap-4">
+          <motion.div 
+            key={expIndex} 
+            className="flex flex-col md:flex-row gap-4"
+            variants={experienceVariants}
+          >
             {/* Company Logo */}
             <div className="flex-shrink-0">
               {exp.logo ? (
@@ -64,10 +101,10 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

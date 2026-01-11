@@ -19,7 +19,7 @@ export const InfoBoxGrid = ({ boxes, columns = 2 }: InfoBoxGridProps) => {
   };
 
   return (
-    <div className={`grid ${gridCols[columns]} gap-x-4 gap-y-4`}>
+    <div className={`grid ${gridCols[columns]} gap-2`}>
       {boxes.map((box, index) => (
         <InfoBox
           key={index}

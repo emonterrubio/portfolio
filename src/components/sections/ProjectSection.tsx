@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 interface ProjectSectionProps {
   title: string;
   subheader?: string;
@@ -5,6 +9,18 @@ interface ProjectSectionProps {
   className?: string;
   contentClassName?: string;
 }
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 export const ProjectSection = ({
   title,
@@ -14,7 +30,13 @@ export const ProjectSection = ({
   contentClassName = "",
 }: ProjectSectionProps) => {
   return (
-    <section className={`space-y-2 ${className}`}>
+    <motion.section 
+      className={`space-y-2 ${className}`}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
       <div className="space-y-2">
         <h2 className="md:text-2xl text-xl font-semibold text-blue-600 font-heading">{title}</h2>
         {subheader && (
@@ -24,7 +46,7 @@ export const ProjectSection = ({
       <div className={`text-base text-black leading-normal space-y-6 ${contentClassName}`}>
         {children}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

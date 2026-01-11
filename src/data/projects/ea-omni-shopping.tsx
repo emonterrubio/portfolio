@@ -125,7 +125,7 @@ export const eaOmniShopping: ProjectContent = {
       subheader: "Natural language hardware recommendations",
       text: "Employees unsure what to order had to schedule consultations with IT, describe their job requirements, wait for recommendations, and hope the suggested hardware matched their actual needs. **Non-technical users often gave up or ordered wrong equipment**. \n\n**Now Assist** offers a user-friendly conversational interface that converts job requirements into tailored hardware suggestions, eliminating the need for any technical expertise.",
       content: [
-        Image("/images/ea-omni-now-assist.png", "ServiceNow Now Assist", "ServiceNow Now Assist", true),
+        Image("/images/ea-omni-now-assist.png", "ServiceNow Now Assist", "ServiceNow Now Assist", false),
         HeaderWithList("Key Capabilities", [
           "**AI-powered guidance** that supports natural language queries",
           "Translates intent into **recommendations** which are also **role-aware**.",

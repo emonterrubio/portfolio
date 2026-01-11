@@ -1,3 +1,5 @@
+"use client";
+
 import { Header } from "@/components/shared/Header";
 import { Footer } from "@/components/shared/Footer";
 import { BackToTop } from "@/components/shared/BackToTop";
@@ -9,88 +11,154 @@ import { VolunteeringSection } from "@/components/sections/experience/Volunteeri
 import { InlineBoldText } from "@/components/sections/InlineBoldText";
 import { aboutData } from "@/data/about";
 import { experienceData } from "@/data/experience";
+import { motion } from "framer-motion";
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 // Section Functions
 function AboutMeSection() {
   return (
-    <HeroSection 
-      title={aboutData.hero.title}
-      description={aboutData.hero.description}
-      avatar={aboutData.hero.avatar}
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+    >
+      <HeroSection 
+        title={aboutData.hero.title}
+        description={aboutData.hero.description}
+        avatar={aboutData.hero.avatar}
+      />
+    </motion.div>
   );
 }
 
 function SelectedImpactSection() {
   return (
-    <ContentSection 
-      title={aboutData.selectedImpact.title}
-      columns={aboutData.selectedImpact.columns}
-      numColumns={aboutData.selectedImpact.numColumns}
-      renderAsList={true}
-      bgColor={aboutData.selectedImpact.bgColor}
-      textColor={aboutData.selectedImpact.textColor}
-    />
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
+      <ContentSection 
+        title={aboutData.selectedImpact.title}
+        columns={aboutData.selectedImpact.columns}
+        numColumns={aboutData.selectedImpact.numColumns}
+        renderAsList={true}
+        bgColor={aboutData.selectedImpact.bgColor}
+        textColor={aboutData.selectedImpact.textColor}
+      />
+    </motion.div>
   );
 }
 
 function SkillsSection() {
   return (
-    <ContentSection 
-      title={aboutData.skills.title}
-      columns={aboutData.skills.columns}
-      numColumns={aboutData.skills.numColumns}
-      renderAsList={true}
-      bgColor={aboutData.skills.bgColor}
-      textColor={aboutData.skills.textColor}
-    />
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
+      <ContentSection 
+        title={aboutData.skills.title}
+        columns={aboutData.skills.columns}
+        numColumns={aboutData.skills.numColumns}
+        renderAsList={true}
+        bgColor={aboutData.skills.bgColor}
+        textColor={aboutData.skills.textColor}
+      />
+    </motion.div>
   );
 }
 
 function EducationSectionComponent() {
   return (
-    <EducationSection 
-      education={experienceData.education} 
-      columns={experienceData.educationColumns} 
-    />
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
+      <EducationSection 
+        education={experienceData.education} 
+        columns={experienceData.educationColumns} 
+      />
+    </motion.div>
   );
 }
 
 function CertificationsSectionComponent() {
   return (
-    <CertificationsSection 
-      certifications={experienceData.certifications} 
-      columns={experienceData.certificationsColumns} 
-    />
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
+      <CertificationsSection 
+        certifications={experienceData.certifications} 
+        columns={experienceData.certificationsColumns} 
+      />
+    </motion.div>
   );
 }
 
 function VolunteeringSectionComponent() {
   return (
-    <VolunteeringSection 
-      volunteering={experienceData.volunteering} 
-      columns={experienceData.volunteeringColumns} 
-    />
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
+      <VolunteeringSection 
+        volunteering={experienceData.volunteering} 
+        columns={experienceData.volunteeringColumns} 
+      />
+    </motion.div>
   );
 }
 
 function ParagraphSection() {
   return (
-    <section className="mb-12">
+    <motion.section
+      className="mb-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
       <p className="text-lg text-gray-700 leading-relaxed">
         <InlineBoldText text={aboutData.paragraph.content} />
       </p>
-    </section>
+    </motion.section>
   );
 }
 
 function TextSection({ content }: { content: string }) {
   return (
-    <section className="mb-12">
+    <motion.section
+      className="mb-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={sectionVariants}
+    >
       <p className="text-lg text-gray-700 leading-relaxed">
         <InlineBoldText text={content} />
       </p>
-    </section>
+    </motion.section>
   );
 }
 

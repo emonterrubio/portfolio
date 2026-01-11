@@ -55,8 +55,8 @@ export const Header = () => {
             className="object-contain"
           />
           <div className="flex flex-col">
-            <h1 className="text-2xl font-bold text-black leading-tight font-heading">Ed Monterrubio</h1>
-            <p className="text-lg font-normal text-gray-600">Product Design</p>
+            <h1 className="text-xl md:text-2xl font-bold text-black leading-tight font-heading">Ed Monterrubio</h1>
+            <p className="text-base md:text-lg font-normal leading-tight text-gray-600">Product Design</p>
           </div>
         </Link>
 

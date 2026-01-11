@@ -78,7 +78,7 @@ export const eaIrisDataInsights: ProjectContent = {
         "**No manual configuration for different workflows**",
         "**Ad hoc requesters vs. analysts** had different needs",
       ], true),
-    Image("/images/ea-iris-home-v1.png", "Iris v1 home page", "The old Iris v1 home page", true),
+    Image("/images/ea-iris-home-v1.png", "Iris v1 home page", "The old Iris v1 home page", false),
     Callout("To address these challenges, we conducted extensive user research to **understand what teams actually needed from a data platform**.", {
       icon: <Pointer className="w-6 h-6" style={{ transform: 'rotate(90deg)' }} />,
       withBackground: true
@@ -118,9 +118,9 @@ export const eaIrisDataInsights: ProjectContent = {
       subheader: "Remove the blank box paralysis",
       text: "Before, Iris v1 struggled with **query ambiguity, leading to incorrect answers or failure to respond**. The system lacked a mechanism to validate its interpretation, undermining user trust and creating a frustrating rephrasing loop for complex questions.",
       content: [
-        Image("/images/ea-iris-box-paralysis.png", "Iris box paralysis", "The Iris box paralysis", true, "100%", "auto"),
+        Image("/images/ea-iris-box-paralysis.png", "Iris box paralysis", "The Iris box paralysis", false, "100%", "auto"),
         TextBlock("Now, the prompt validation builder **manages ambiguous queries and provides transparency into Iris's application of context and business rules**. This functionality delivers enhanced feedback, allowing users to refine questions and correct any answer inaccuracies."),
-        Image("/images/ea-iris-disambiguation-builder.png", "Iris disambiguation builder", "The Iris disambiguation builder", true),
+        Image("/images/ea-iris-disambiguation-builder.png", "Iris disambiguation builder", "The Iris disambiguation builder", false),
         ImageRow([
           { src: "/images/ea-iris-disambiguation-sql-1.png", alt: "Iris disambiguation builder", caption: "", padding: false },
           { src: "/images/ea-iris-disambiguation-sql-2.png", alt: "Iris disambiguation builder", caption: "", padding: false }
@@ -141,7 +141,7 @@ export const eaIrisDataInsights: ProjectContent = {
       subheader: "Natural language data access",
       content: [
         TextBlock("The Guided Prompt Experience scaffolds user input, while the AI Companion processes that structured input to deliver accurate results. Together, these layers enable anyone to access enterprise data, from executives checking metrics to analysts building complex reports."),
-        Image("/images/ea-iris-nlp-analysis.png", "Iris nlp analysis", "The Iris nlp analysis", true),
+        Image("/images/ea-iris-nlp-analysis.png", "Iris nlp analysis", "The Iris nlp analysis", false),
         TextBlock("Quickly create tables, charts, and summaries for easy interpretation. The conversational nature of AI allows for ongoing adjustments and refinements before finalizing the data."),
         ImageRow([
           { src: "/images/ea-iris-nlp-companion-1.png", alt: "Iris nlp companion 1", caption: "The Iris nlp companion", padding: false },
@@ -163,7 +163,7 @@ export const eaIrisDataInsights: ProjectContent = {
         TextBlock("Before, chat responses were ephemeral (lost in scroll), users had to recreate reports from scratch each time, and there was no collaboration or sharing."),
         Image("/images/ea-iris-chat-v1.png", "Iris chat v1", "The Iris chat v1", false),
         TextBlock("**Stories now exist as persistent canvases**. The Story composer offers persistent, editable canvases with a drag-and-drop interface for organizing content.\n\nThe Story composer features live data refresh for current information, and allows sharing with teams through adjustable view/edit permissions."),
-        Image("/images/ea-iris-companion-stories.png", "Iris companion stories", "The Iris companion stories", true),
+        Image("/images/ea-iris-companion-stories.png", "Iris companion stories", "The Iris companion stories", false),
         HeaderWithList("Key Capabilities", [
           "Build and organize with a **simple drag-and-drop interface** to structure your content.",
           "**Narrative components** allow you to combine generative summaries, custom text, dashboards, and visualizations into one cohesive report.",
@@ -177,10 +177,10 @@ export const eaIrisDataInsights: ProjectContent = {
       subheader: "Make every visualization explorable and insightful",
       content: [
         TextBlock("The **Chart Highlights feature** automatically elevates visualizations by providing visual cues that highlight significant data points, trends, or anomalies. This dramatically improves storytelling by making data immediately informative, as it automatically emphasizes key events and changes relevant to the narrative the user is building."),
-        Image("/images/ea-iris-hover-data-point.png", "Iris hover data point", "The Iris hover data point", true),
+        Image("/images/ea-iris-hover-data-point.png", "Iris hover data point", "The Iris hover data point", false),
         TextBlock("The **Chart Drill Down feature** enables users to instantly go deeper into their analysis. Users can drill down on any chart point to explore the underlying data attributes."),
-        Image("/images/ea-iris-drilldown-chart.png", "Iris drilldown chart", "The Iris drilldown chart", true),
-        Image("/images/ea-iris-highlight-chart.png", "Iris highlight chart", "The Iris highlight chart", true),
+        Image("/images/ea-iris-drilldown-chart.png", "Iris drilldown chart", "The Iris drilldown chart", false),
+        Image("/images/ea-iris-highlight-chart.png", "Iris highlight chart", "The Iris highlight chart", false),
         HeaderWithList("Key Capabilities", [
           "The **automatic highlighting feature** allows AI to surface significant trends and anomalies.",
           "You can **click on any point** to explore the underlying data through contextual drill-down.",
@@ -200,7 +200,7 @@ export const eaIrisDataInsights: ProjectContent = {
           "The **STORY COMPOSER** lets them build narratives and share with teams", 
           "The **INTELLIGENT CHARTS** enable deep exploration and discovery",
         ], true),
-        TextBlock("What was once a weeks-long, multi-team effort is now a self-service  workflow that anyone can complete in minutes."),
+        TextBlock("What was once a weeks-long, multi-team effort is now a **self-service workflow** that anyone can complete in minutes."),
       ]
     },
     {
