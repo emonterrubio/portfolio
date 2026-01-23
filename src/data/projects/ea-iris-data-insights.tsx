@@ -119,12 +119,22 @@ export const eaIrisDataInsights: ProjectContent = {
       text: "Before, Iris v1 struggled with **query ambiguity, leading to incorrect answers or failure to respond**. The system lacked a mechanism to validate its interpretation, undermining user trust and creating a frustrating rephrasing loop for complex questions.",
       content: [
         Image("/images/ea-iris-box-paralysis.png", "Iris box paralysis", "The Iris box paralysis", false, "100%", "auto"),
+        TextBlock("One of Iris's key features is AI-generated insight summaries — the platform analyzes data patterns and produces written explanations of what's significant. But we had a trust problem. The AI would produce confident-sounding summaries that were actually based on insufficient data, or presented correlation as causation. Users had no way to tell when to trust what they were reading."),
+        TextBlock("Before jumping to solutions, I mapped the root causes. I identified five types of uncertainty that could undermine an insight — from not having enough data points, to patterns that might not persist over time. This taxonomy became our diagnostic framework."),
+        TextBlock("The trust system helped automated generation, and also added transparency layers at two critical moments — before the query runs, and after results arrive. Previously, the Guided Prompts showed data quality, validated scope, and set confidence expectations upfront.  The new Confidence System shows reliability, explains limitations, and offers paths forward. The insight here is that confidence should be set at query time, not revealed as a surprise after."),
+        Image("/images/ea-iris-confidence-system.png", "Iris confidence system", "The Iris confidence system", false, "100%", "auto"),
         TextBlock("Now, the prompt validation builder **manages ambiguous queries and provides transparency into Iris's application of context and business rules**. This functionality delivers enhanced feedback, allowing users to refine questions and correct any answer inaccuracies."),
         Image("/images/ea-iris-disambiguation-builder.png", "Iris disambiguation builder", "The Iris disambiguation builder", false),
+        TextBlock("The new guided experience surfaces limitations proactively so users understand scope constraints before interpreting results. Surface limitations proactively so users understand scope constraints before interpreting results."),
         ImageRow([
-          { src: "/images/ea-iris-disambiguation-sql-1.png", alt: "Iris disambiguation builder", caption: "", padding: false },
-          { src: "/images/ea-iris-disambiguation-sql-2.png", alt: "Iris disambiguation builder", caption: "", padding: false }
+          { src: "/images/ea-iris-disambiguation-sql-1.png", alt: "Iris disambiguation builder", caption: "How was this calculated?", padding: false },
+          { src: "/images/ea-iris-disambiguation-sql-2.png", alt: "Iris disambiguation builder", caption: "Data Caveats & Limitations", padding: false }
         ]),
+        Callout("**Key Design Principle**: Confidence is set at query time, not revealed as a surprise after. Users who see 'Medium Confidence' before running a query aren't surprised when results confirm it. **This builds trust, even when confidence is low.**",
+          {
+            icon: <Pointer className="w-6 h-6" style={{ transform: 'rotate(90deg)' }} />,
+            withBackground: true
+          }),
         HeaderWithList("Key Capabilities", [
           "Select domains by scoping queries to relevant data",
           "Use **context-aware question templates** as suggested prompts",
@@ -133,7 +143,6 @@ export const eaIrisDataInsights: ProjectContent = {
         ], true, 3),
         
         HeaderWithText("Impact", "**78% of users** who struggled with prompts can now **get accurate answers on first try**.", 3),
-        Callout("The Guided Prompt Experience structures user questions. Now let's see what happens when those structured queries  meet our AI processing layer"),
       ]
     },
     {

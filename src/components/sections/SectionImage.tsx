@@ -24,8 +24,8 @@ export const SectionImage = ({
   if (height) imageStyle.height = height;
   
   return (
-    <div className={`space-y-2 mt-6 ${className}`} style={width ? { width } : undefined}>
-      <div className={`relative bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center ${padding ? 'p-6' : ''}`}>
+    <div className={`space-y-2 mt-6 w-full ${className}`}>
+      <div className={`relative rounded-lg overflow-hidden ${padding ? 'p-6 bg-gray-100' : ''}`} style={width === '100%' ? { width: '100%' } : width ? { width } : undefined}>
         <Image
           src={src}
           alt={alt}
