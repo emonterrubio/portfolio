@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
-
-const hostGrotesk = Host_Grotesk({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-host-grotesk",
-});
 
 export const metadata: Metadata = {
   title: "Ed Monterrubio - Product Design Portfolio",
@@ -21,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hostGrotesk.variable} font-sans antialiased bg-gray-100`}
+        className="font-sans antialiased bg-gray-100"
       >
         {children}
       </body>
